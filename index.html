@@ -1,0 +1,226 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Railway Ticket Waiting List Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <h1>🚆 Railway Ticket Waiting List Manager</h1>
+
+        <p>
+            Smart Railway Reservation using Queue Data Structure
+        </p>
+
+    </header>
+
+
+    <!-- Dashboard -->
+
+    <section class="dashboard">
+
+        <div class="card">
+
+            <h3>Total Seats</h3>
+
+            <p id="totalSeats">10</p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Available Seats</h3>
+
+            <p id="availableSeats">10</p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Confirmed Tickets</h3>
+
+            <p id="confirmedTickets">0</p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Waiting List</h3>
+
+            <p id="waitingCount">0</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Passenger Booking -->
+
+    <section class="container">
+
+        <h2>🎫 Book Railway Ticket</h2>
+
+
+        <div class="form">
+
+            <input type="text" id="passengerName" placeholder="Enter Passenger Name">
+
+
+            <input type="number" id="passengerAge" placeholder="Enter Age">
+
+
+            <select id="passengerGender">
+
+                <option value="Male">
+                    Male
+                </option>
+
+                <option value="Female">
+                    Female
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+
+            <input type="text" id="trainNumber" placeholder="Train Number">
+
+
+            <button onclick="bookTicket()">
+                Book Ticket
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Seat Status -->
+
+    <section class="container">
+
+        <h2>💺 Seat Status</h2>
+
+        <div id="seatArea" class="seat-area">
+        </div>
+
+    </section>
+
+
+    <!-- Confirmed Passengers -->
+
+    <section class="container">
+
+        <h2>✅ Confirmed Passengers</h2>
+
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Seat</th>
+
+                    <th>Name</th>
+
+                    <th>Age</th>
+
+                    <th>Gender</th>
+
+                    <th>Train</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="confirmedTable">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+    <!-- Waiting List -->
+
+    <section class="container">
+
+        <h2>⏳ Railway Waiting List</h2>
+
+
+        <div id="waitingList">
+
+            No passengers in waiting list.
+
+        </div>
+
+    </section>
+
+
+    <!-- Search Passenger -->
+
+    <section class="container">
+
+        <h2>🔎 Search Passenger</h2>
+
+
+        <div class="form">
+
+            <input type="text" id="searchName" placeholder="Enter Passenger Name">
+
+
+            <button onclick="searchPassenger()">
+                Search
+            </button>
+
+        </div>
+
+
+        <p id="searchResult"></p>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            Railway Ticket Waiting List Manager |
+            Data Structures Micro Project
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
